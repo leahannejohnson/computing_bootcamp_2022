@@ -54,7 +54,7 @@ See the [Appendix](#appendix) for a list of the countries in the data.
 #| message: false
 
 unvotes %>%
-  filter(country %in% c("UK", "US", "Turkey")) %>%
+  filter(country %in% c("India", "Montenegro", "Brazil")) %>%
   mutate(year = year(date)) %>%
   group_by(country, year, issue) %>%
   summarize(percent_yes = mean(vote == "yes")) %>%
